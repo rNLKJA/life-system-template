@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.inFolder("Knowledge")
+    - file.ext == "md"
+    - type == "knowledge"
+views:
+  - type: table
+    name: All knowledge
+    order:
+      - file.name
+      - status
+      - created
+      - source
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Seeds to test
+    filters:
+      and:
+        - status == "seed"
+    order:
+      - file.name
+      - created

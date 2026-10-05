@@ -1,0 +1,42 @@
+# Operating system and editor droppings
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+.~lock.*#
+**/.~lock.*#
+
+# Working files: only the folder's README and the plans folder itself are tracked
+Scratch/*
+!Scratch/README.md
+!Scratch/plans/
+Scratch/plans/*
+!Scratch/plans/.gitkeep
+
+# Private by convention: any folder named Records/ never leaves this machine,
+# so a new area's papers are private from the first day
+**/Records/
+
+# The intake tray holds papers before they are filed
+HQ/Intake/*
+!HQ/Intake/.gitkeep
+
+# Archived code keeps its own history
+Archive/Code/
+
+# Secrets and local state
+**/.env
+*.db
+*.db-journal
+.claude/settings.local.json
+**/.claude/worktrees/
+
+# Obsidian: share the vault settings, not each device's window layout
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/

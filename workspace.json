@@ -1,0 +1,20 @@
+{
+  "owner": "{{OWNER}}",
+  "timezone": "{{TIMEZONE}}",
+  "spelling": "{{SPELLING}}",
+  "language": "{{LANGUAGE}}",
+  "folders": {
+    "areas": "Areas",
+    "projects": "Projects",
+    "hq": "HQ",
+    "archive": "Archive",
+    "knowledge": "Knowledge",
+    "resources": "Resources",
+    "scratch": "Scratch"
+  },
+  "graph": {
+    "hub_depth": 2,
+    "hub_markers": ["MEMORY.md", "PROJECT.md"],
+    "feed_suffix": "Summaries"
+  }
+}

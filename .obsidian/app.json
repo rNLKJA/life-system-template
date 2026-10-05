@@ -1,0 +1,12 @@
+{
+  "userIgnoreFilters": [
+    "Scratch/",
+    "node_modules/"
+  ],
+  "useMarkdownLinks": false,
+  "newLinkFormat": "absolute",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "propertiesInDocument": "visible",
+  "attachmentFolderPath": "./"
+}

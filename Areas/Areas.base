@@ -1,0 +1,27 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.hasProperty("area")
+views:
+  - type: table
+    name: Live projects by area
+    filters:
+      and:
+        - file.inFolder("Projects")
+    order:
+      - area
+      - file.name
+      - status
+      - created
+    sort:
+      - property: area
+        direction: ASC
+  - type: table
+    name: Archived projects
+    filters:
+      and:
+        - file.inFolder("Archive/Projects")
+    order:
+      - area
+      - file.name
+      - status

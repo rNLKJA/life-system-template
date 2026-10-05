@@ -1,0 +1,4 @@
+# Read by ripgrep (and so by most agents' search tools) on top of .gitignore.
+# Everything here stays on disk and readable by path; it just stays out of search
+# results, so stale copies never pass for live files. Delete a line to search it again.
+Scratch/
