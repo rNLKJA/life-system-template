@@ -40,34 +40,36 @@ export function VaultNavigator() {
   const [expanded, setExpanded] = useState<string | null>(null)
 
   return (
-    <div className="space-y-4">
-      <div className="border border-black bg-white p-4 dark:border-white dark:bg-black">
-        <h2 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider">
-          Vault Structure
-        </h2>
-        <div className="grid gap-3">
-          {vaultFolders.map((folder) => (
-            <button
-              key={folder.name}
-              onClick={() =>
-                setExpanded(expanded === folder.name ? null : folder.name)
-              }
-              className="flex items-start gap-3 border border-black p-3 text-left transition-colors hover:bg-accent hover:text-white dark:border-white dark:hover:bg-accent"
-            >
-              <span className="dot-matrix text-lg">{folder.icon}</span>
-              <div className="flex-1">
-                <div className="font-mono font-bold uppercase tracking-wider">
+    <div className="rounded-lg border border-border bg-card p-6">
+      <div className="space-y-2">
+        {vaultFolders.map((folder) => (
+          <button
+            key={folder.name}
+            onClick={() =>
+              setExpanded(expanded === folder.name ? null : folder.name)
+            }
+            className="group w-full text-left"
+          >
+            <div className="flex items-start gap-3 rounded-md px-4 py-3 transition-all hover:bg-secondary">
+              <span className="mt-0.5 flex-shrink-0 font-mono text-lg text-primary transition-transform group-hover:scale-125">
+                {folder.icon}
+              </span>
+              <div className="flex-1 min-w-0">
+                <div className="font-display font-bold text-foreground">
                   {folder.name}
                 </div>
                 {expanded === folder.name && (
-                  <div className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+                  <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {folder.description}
                   </div>
                 )}
               </div>
-            </button>
-          ))}
-        </div>
+              <span className="mt-0.5 flex-shrink-0 text-xs text-muted-foreground transition-transform group-hover:text-primary">
+                {expanded === folder.name ? '−' : '+'}
+              </span>
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   )
