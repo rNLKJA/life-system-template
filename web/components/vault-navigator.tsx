@@ -12,27 +12,27 @@ const vaultFolders: VaultFolder[] = [
   {
     name: 'Areas',
     description: 'Your ongoing responsibilities: career, money, home, health',
-    icon: '◊',
+    icon: '|',
   },
   {
     name: 'Projects',
     description: 'Time-bound projects tagged with the area they serve',
-    icon: '■',
+    icon: '[',
   },
   {
     name: 'HQ',
     description: 'Goals, reviews, agent homes and intake tray',
-    icon: '●',
+    icon: 'o',
   },
   {
     name: 'Knowledge',
     description: 'One idea per note with its source',
-    icon: '▲',
+    icon: '^',
   },
   {
     name: 'Archive',
     description: 'Finished projects, old papers and code',
-    icon: '□',
+    icon: '-',
   },
 ]
 

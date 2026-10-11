@@ -39,22 +39,22 @@ export default function Home() {
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               <FeatureCard
-                icon="⚖"
+                icon="="
                 title="Agent Contract"
                 description="One AGENTS.md at the root defines how all agents work here: precedence, planning, memory, logging and naming."
               />
               <FeatureCard
-                icon="◆"
+                icon="*"
                 title="Areas as the Backbone"
                 description="Areas hold your ongoing responsibilities (career, money, home, health), projects serve areas, archives hold what is finished."
               />
               <FeatureCard
-                icon="📝"
+                icon="#"
                 title="Smart Memory"
                 description="MEMORY.md stays small (300-line ceiling). LOG.md is append-only. ARCHIVE.md holds what used to be true. INBOX.md for later."
               />
               <FeatureCard
-                icon="🔒"
+                icon="@"
                 title="Privacy by Convention"
                 description="Any folder named Records/ is gitignored, so personal papers never reach GitHub but stay in your vault."
               />
