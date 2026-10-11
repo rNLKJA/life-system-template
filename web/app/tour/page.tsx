@@ -52,7 +52,23 @@ export default function TourPage() {
                 </figcaption>
               </figure>
 
-              {/* Screenshot 3: Mobile responsive */}
+              {/* Screenshot 3: Tablet responsive */}
+              <figure>
+                <div className="mb-4 overflow-hidden rounded-lg border border-border bg-stone-50">
+                  <img
+                    src="/tour/home-light-768.png"
+                    alt="Home page on tablet at 768px width"
+                    width={768}
+                    height={1024}
+                    className="w-full"
+                  />
+                </div>
+                <figcaption className="text-sm text-muted-foreground">
+                  Responsive design at tablet width (768px)
+                </figcaption>
+              </figure>
+
+              {/* Screenshot 4: Mobile responsive */}
               <figure>
                 <div className="mb-4 overflow-hidden rounded-lg border border-border bg-stone-50 sm:max-w-sm">
                   <img
