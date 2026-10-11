@@ -109,7 +109,7 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-black px-6 py-8 dark:border-white">
         <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl font-bold tracking-tight">
+          <h1 className="text-5xl font-bold tracking-tight">
             life-system-template
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
@@ -125,7 +125,7 @@ export default function Home() {
           {/* Hero */}
           <section>
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="border border-black p-6 dark:border-white">
+              <div className="rounded-lg border border-black p-6 dark:border-white">
                 <p className="text-lg leading-relaxed">
                   One Obsidian vault. One behaviour contract. Areas as the
                   backbone. This is a starting point for a personal life OS: a
@@ -177,7 +177,7 @@ export default function Home() {
           </section>
 
           {/* Usage section */}
-          <section className="border border-black p-6 dark:border-white">
+          <section className="rounded-lg border border-black p-6 dark:border-white">
             <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
               Getting Started
             </h2>
@@ -205,7 +205,7 @@ export default function Home() {
           </section>
 
           {/* About section */}
-          <section className="border border-black p-6 dark:border-white">
+          <section className="rounded-lg border border-black p-6 dark:border-white">
             <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
               About
             </h2>
