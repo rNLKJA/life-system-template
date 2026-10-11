@@ -8,6 +8,14 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: [],
+    exclude: [
+      'node_modules',
+      '.next',
+      'scripts',
+      'playwright.config.ts',
+      '**/*.spec.ts',
+      '**/*.spec.tsx',
+    ],
   },
   resolve: {
     alias: {
