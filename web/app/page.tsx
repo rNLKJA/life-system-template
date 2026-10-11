@@ -1,6 +1,108 @@
 import { FeatureCard } from '@/components/feature-card'
 import { VaultNavigator } from '@/components/vault-navigator'
 
+function VaultIllustration() {
+  return (
+    <svg
+      viewBox="0 0 400 350"
+      className="w-full max-w-sm"
+      aria-hidden="true"
+      role="img"
+    >
+      <title>Vault folder tree diagram</title>
+      {/* Root vault */}
+      <g className="transition-colors duration-300">
+        {/* Root folder */}
+        <rect
+          x="150"
+          y="40"
+          width="100"
+          height="40"
+          rx="4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <text x="200" y="65" fontSize="12" fontFamily="monospace" fontWeight="bold" fill="currentColor" textAnchor="middle">
+          VAULT
+        </text>
+
+        {/* Connection lines */}
+        <g stroke="currentColor" strokeWidth="1.5" opacity="0.4">
+          <line x1="200" y1="80" x2="200" y2="110" />
+          {/* Branch to Areas */}
+          <line x1="200" y1="110" x2="100" y2="130" />
+          {/* Branch to Projects */}
+          <line x1="200" y1="110" x2="200" y2="130" />
+          {/* Branch to Archives */}
+          <line x1="200" y1="110" x2="300" y2="130" />
+        </g>
+
+        {/* Areas folder */}
+        <rect x="50" y="130" width="100" height="40" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
+        <text x="100" y="155" fontSize="11" fontFamily="monospace" fontWeight="bold" fill="currentColor" textAnchor="middle">
+          Areas/
+        </text>
+
+        {/* Projects folder */}
+        <rect x="150" y="130" width="100" height="40" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
+        <text x="200" y="155" fontSize="11" fontFamily="monospace" fontWeight="bold" fill="currentColor" textAnchor="middle">
+          Projects/
+        </text>
+
+        {/* Archives folder */}
+        <rect x="250" y="130" width="100" height="40" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
+        <text x="300" y="155" fontSize="11" fontFamily="monospace" fontWeight="bold" fill="currentColor" textAnchor="middle">
+          Archives/
+        </text>
+
+        {/* Areas sub-items */}
+        <g stroke="currentColor" strokeWidth="1" opacity="0.4">
+          <line x1="100" y1="170" x2="100" y2="190" />
+          <line x1="100" y1="190" x2="80" y2="200" />
+          <line x1="100" y1="190" x2="120" y2="200" />
+        </g>
+        <rect x="40" y="200" width="70" height="25" rx="2" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <text x="75" y="216" fontSize="8" fontFamily="monospace" fill="currentColor" textAnchor="middle" opacity="0.8">
+          Career
+        </text>
+        <rect x="90" y="200" width="70" height="25" rx="2" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <text x="125" y="216" fontSize="8" fontFamily="monospace" fill="currentColor" textAnchor="middle" opacity="0.8">
+          Health
+        </text>
+
+        {/* Projects sub-items */}
+        <g stroke="currentColor" strokeWidth="1" opacity="0.4">
+          <line x1="200" y1="170" x2="200" y2="190" />
+          <line x1="200" y1="190" x2="180" y2="200" />
+          <line x1="200" y1="190" x2="220" y2="200" />
+        </g>
+        <rect x="140" y="200" width="70" height="25" rx="2" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <text x="175" y="216" fontSize="8" fontFamily="monospace" fill="currentColor" textAnchor="middle" opacity="0.8">
+          Active
+        </text>
+        <rect x="190" y="200" width="70" height="25" rx="2" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <text x="225" y="216" fontSize="8" fontFamily="monospace" fill="currentColor" textAnchor="middle" opacity="0.8">
+          Planning
+        </text>
+      </g>
+
+      {/* Key files */}
+      <g transform="translate(80, 250)">
+        <rect x="0" y="0" width="240" height="60" rx="4" fill="currentColor" opacity="0.05" stroke="currentColor" strokeWidth="1" />
+        <text x="10" y="20" fontSize="10" fontFamily="monospace" fontWeight="bold" fill="currentColor">
+          Key Files:
+        </text>
+        <g fontSize="9" fontFamily="monospace" fill="currentColor" opacity="0.7">
+          <text x="20" y="38">AGENTS.md</text>
+          <text x="110" y="38">MEMORY.md</text>
+          <text x="200" y="38">LOG.md</text>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
@@ -22,13 +124,18 @@ export default function Home() {
         <div className="mx-auto max-w-4xl space-y-12 px-6 py-12">
           {/* Hero */}
           <section>
-            <div className="border border-black p-6 dark:border-white">
-              <p className="text-lg leading-relaxed">
-                One Obsidian vault. One behaviour contract. Areas as the
-                backbone. This is a starting point for a personal life OS: a
-                set of plain Markdown folders that you and any AI agent can
-                read and keep up to date.
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="border border-black p-6 dark:border-white">
+                <p className="text-lg leading-relaxed">
+                  One Obsidian vault. One behaviour contract. Areas as the
+                  backbone. This is a starting point for a personal life OS: a
+                  set of plain Markdown folders that you and any AI agent can
+                  read and keep up to date.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <VaultIllustration />
+              </div>
             </div>
           </section>
 
