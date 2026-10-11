@@ -1,131 +1,99 @@
 export default function TourPage() {
   return (
     <main className="flex min-h-screen flex-col">
-      <header className="border-b border-black px-6 py-8 dark:border-white">
-        <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl font-bold tracking-tight">Guided Tour</h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+      <header className="border-b border-border px-gutter py-8 sm:py-12">
+        <div className="mx-auto max-w-6xl">
+          <h1 className="font-display text-5xl font-bold text-primary">
+            Guided Tour
+          </h1>
+          <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
             Explore the life-system-template
           </p>
         </div>
       </header>
 
-      <div className="flex-1 px-6 py-12">
-        <div className="mx-auto max-w-4xl space-y-12">
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
-              Walkthrough Videos
+      <div className="flex-1 px-gutter py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl space-y-12 sm:space-y-16">
+          {/* Screenshot Gallery */}
+          <section className="rounded-lg border border-border bg-card p-6 sm:p-8">
+            <h2 className="mb-8 font-display text-2xl font-bold text-foreground">
+              Design showcase
             </h2>
-            <div className="space-y-8">
+            <div className="grid gap-6 sm:grid-cols-1">
+              {/* Screenshot 1: Light mode home page */}
               <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <video
-                    controls
-                    width="1280"
-                    height="800"
-                    poster="/docs/showcase/videos/tour-01-landing-poster.jpg"
+                <div className="mb-4 overflow-hidden rounded-lg border border-border bg-stone-50">
+                  <img
+                    src="/tour/home-light-1440.png"
+                    alt="Home page in light mode at 1440px width"
+                    width={1440}
+                    height={900}
                     className="w-full"
-                  >
-                    <source src="/docs/showcase/videos/tour-01-landing.mp4" type="video/mp4" />
-                    <track
-                      kind="captions"
-                      src="/docs/showcase/videos/tour-01-landing.vtt"
-                      srcLang="en"
-                      label="English"
-                      default
-                    />
-                  </video>
+                  />
                 </div>
-                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Landing page walkthrough</strong>
-                  <ul className="mt-2 list-disc pl-5 text-xs">
-                    <li>Landing on life-system-template home page</li>
-                    <li>Viewing the hero section and feature cards</li>
-                    <li>Exploring the vault structure navigator</li>
-                  </ul>
+                <figcaption className="text-sm text-muted-foreground">
+                  Home page with hero section and feature cards (light mode)
                 </figcaption>
               </figure>
 
+              {/* Screenshot 2: Dark mode home page */}
               <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <video
-                    controls
-                    width="1280"
-                    height="800"
-                    poster="/docs/showcase/videos/tour-02-features-poster.jpg"
+                <div className="mb-4 overflow-hidden rounded-lg border border-border bg-stone-950">
+                  <img
+                    src="/tour/home-dark-1440.png"
+                    alt="Home page in dark mode at 1440px width"
+                    width={1440}
+                    height={900}
                     className="w-full"
-                  >
-                    <source src="/docs/showcase/videos/tour-02-features.mp4" type="video/mp4" />
-                    <track
-                      kind="captions"
-                      src="/docs/showcase/videos/tour-02-features.vtt"
-                      srcLang="en"
-                      label="English"
-                      default
-                    />
-                  </video>
+                  />
                 </div>
-                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Features overview</strong>
-                  <ul className="mt-2 list-disc pl-5 text-xs">
-                    <li>Scrolling to the features section</li>
-                    <li>Reading feature cards: Agent Contract, Areas, Memory</li>
-                    <li>Viewing Privacy by Convention details</li>
-                  </ul>
+                <figcaption className="text-sm text-muted-foreground">
+                  Home page in dark mode with Obsidian-inspired violet accents
                 </figcaption>
               </figure>
 
+              {/* Screenshot 3: Mobile responsive */}
               <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <video
-                    controls
-                    width="1280"
-                    height="800"
-                    poster="/docs/showcase/videos/tour-03-tour-poster.jpg"
+                <div className="mb-4 overflow-hidden rounded-lg border border-border bg-stone-50 sm:max-w-sm">
+                  <img
+                    src="/tour/home-light-390.png"
+                    alt="Home page on mobile at 390px width"
+                    width={390}
+                    height={844}
                     className="w-full"
-                  >
-                    <source src="/docs/showcase/videos/tour-03-tour.mp4" type="video/mp4" />
-                    <track
-                      kind="captions"
-                      src="/docs/showcase/videos/tour-03-tour.vtt"
-                      srcLang="en"
-                      label="English"
-                      default
-                    />
-                  </video>
+                  />
                 </div>
-                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Tour page exploration</strong>
-                  <ul className="mt-2 list-disc pl-5 text-xs">
-                    <li>Navigating to the tour page</li>
-                    <li>Viewing tour introduction and walkthrough</li>
-                    <li>Exploring tour video gallery</li>
-                  </ul>
+                <figcaption className="text-sm text-muted-foreground">
+                  Responsive design at mobile width (390px)
                 </figcaption>
               </figure>
             </div>
           </section>
 
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
+          {/* What is a life system? */}
+          <section className="rounded-lg border border-border bg-secondary p-6 sm:p-8">
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">
               What is a life system?
             </h2>
-            <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
-              A life system is a set of interconnected notes and folders that hold your
-              goals, projects, areas of responsibility and the papers that support them.
-              It is shared between you and your AI agents.
-            </p>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              The key insight is that everything is Markdown: plain text that both humans
-              and agents can read, update and understand.
-            </p>
+            <div className="space-y-4 text-sm leading-relaxed text-foreground">
+              <p>
+                A life system is a set of interconnected notes and folders that hold your
+                goals, projects, areas of responsibility and the papers that support them.
+                It is shared between you and your AI agents.
+              </p>
+              <p className="text-muted-foreground">
+                The key insight is that everything is Markdown: plain text that both humans
+                and agents can read, update and understand.
+              </p>
+            </div>
           </section>
 
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
-              Example Structure
+          {/* Example Structure */}
+          <section className="rounded-lg border border-border bg-card p-6 sm:p-8">
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">
+              Example structure
             </h2>
-            <pre className="overflow-x-auto rounded bg-gray-100 p-4 font-mono text-xs dark:bg-gray-900">
+            <pre className="overflow-x-auto rounded bg-secondary px-4 py-3 font-mono text-xs text-foreground">
 {`My Life/
 ├─ Areas/
 │  ├─ Career/
@@ -141,11 +109,12 @@ export default function TourPage() {
             </pre>
           </section>
 
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
-              Getting Started
+          {/* Getting Started */}
+          <section className="rounded-lg border border-border bg-secondary p-6 sm:p-8">
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">
+              Getting started
             </h2>
-            <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <div className="space-y-3 text-sm leading-relaxed text-foreground">
               <p>1. Clone the template as your own repository</p>
               <p>2. Run the initialisation script to configure your areas</p>
               <p>3. Open the folder in Obsidian</p>
@@ -155,10 +124,13 @@ export default function TourPage() {
         </div>
       </div>
 
-      <footer className="border-t border-black px-6 py-8 dark:border-white">
-        <div className="mx-auto max-w-4xl text-center text-sm text-gray-600 dark:text-gray-400">
+      <footer className="border-t border-border px-gutter py-8">
+        <div className="mx-auto max-w-6xl text-center text-sm text-muted-foreground">
           <p>
-            <a href="/" className="hover:text-accent underline">
+            <a
+              href="/"
+              className="font-medium text-primary hover:text-primary/80"
+            >
               Back to home
             </a>
           </p>
