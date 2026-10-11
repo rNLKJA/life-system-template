@@ -14,85 +14,93 @@ export default function TourPage() {
         <div className="mx-auto max-w-4xl space-y-12">
           <section className="border border-black p-6 dark:border-white">
             <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
-              Tour Gallery
+              Walkthrough Videos
             </h2>
             <div className="space-y-8">
               <figure>
                 <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <img
-                    src="/docs/showcase/01-landing.png"
-                    alt="Landing page showing title and introduction"
+                  <video
+                    controls
+                    width="1280"
+                    height="800"
+                    poster="/docs/showcase/videos/tour-01-landing-poster.jpg"
                     className="w-full"
-                  />
+                  >
+                    <source src="/docs/showcase/videos/tour-01-landing.mp4" type="video/mp4" />
+                    <track
+                      kind="captions"
+                      src="/docs/showcase/videos/tour-01-landing.vtt"
+                      srcLang="en"
+                      label="English"
+                      default
+                    />
+                  </video>
                 </div>
-                <figcaption className="text-sm text-gray-600 dark:text-gray-400">
-                  Landing page: life-system-template overview with introduction
+                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
+                  <strong>Landing page walkthrough</strong>
+                  <ul className="mt-2 list-disc pl-5 text-xs">
+                    <li>Landing on life-system-template home page</li>
+                    <li>Viewing the hero section and feature cards</li>
+                    <li>Exploring the vault structure navigator</li>
+                  </ul>
                 </figcaption>
               </figure>
 
               <figure>
                 <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <img
-                    src="/docs/showcase/02-features.png"
-                    alt="Features section with four key capabilities"
+                  <video
+                    controls
+                    width="1280"
+                    height="800"
+                    poster="/docs/showcase/videos/tour-02-features-poster.jpg"
                     className="w-full"
-                  />
+                  >
+                    <source src="/docs/showcase/videos/tour-02-features.mp4" type="video/mp4" />
+                    <track
+                      kind="captions"
+                      src="/docs/showcase/videos/tour-02-features.vtt"
+                      srcLang="en"
+                      label="English"
+                      default
+                    />
+                  </video>
                 </div>
-                <figcaption className="text-sm text-gray-600 dark:text-gray-400">
-                  Features: Agent contract, Areas as backbone, Smart memory, Privacy by
-                  convention
+                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
+                  <strong>Features overview</strong>
+                  <ul className="mt-2 list-disc pl-5 text-xs">
+                    <li>Scrolling to the features section</li>
+                    <li>Reading feature cards: Agent Contract, Areas, Memory</li>
+                    <li>Viewing Privacy by Convention details</li>
+                  </ul>
                 </figcaption>
               </figure>
 
               <figure>
                 <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <img
-                    src="/docs/showcase/03-vault-expanded.png"
-                    alt="Vault navigator with expanded section"
+                  <video
+                    controls
+                    width="1280"
+                    height="800"
+                    poster="/docs/showcase/videos/tour-03-tour-poster.jpg"
                     className="w-full"
-                  />
+                  >
+                    <source src="/docs/showcase/videos/tour-03-tour.mp4" type="video/mp4" />
+                    <track
+                      kind="captions"
+                      src="/docs/showcase/videos/tour-03-tour.vtt"
+                      srcLang="en"
+                      label="English"
+                      default
+                    />
+                  </video>
                 </div>
-                <figcaption className="text-sm text-gray-600 dark:text-gray-400">
-                  Interactive vault navigator: expand folders to explore structure
-                </figcaption>
-              </figure>
-
-              <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <img
-                    src="/docs/showcase/04-tour-page.png"
-                    alt="Tour page showing gallery and structure"
-                    className="w-full"
-                  />
-                </div>
-                <figcaption className="text-sm text-gray-600 dark:text-gray-400">
-                  Tour page: Guided walkthroughs and structure examples
-                </figcaption>
-              </figure>
-
-              <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <img
-                    src="/docs/showcase/05-mobile-landing.png"
-                    alt="Mobile view of landing page"
-                    className="w-full"
-                  />
-                </div>
-                <figcaption className="text-sm text-gray-600 dark:text-gray-400">
-                  Mobile responsive: landing page on 390px width
-                </figcaption>
-              </figure>
-
-              <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
-                  <img
-                    src="/docs/showcase/06-mobile-features.png"
-                    alt="Mobile view of features section"
-                    className="w-full"
-                  />
-                </div>
-                <figcaption className="text-sm text-gray-600 dark:text-gray-400">
-                  Mobile responsive: features section on mobile device
+                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
+                  <strong>Tour page exploration</strong>
+                  <ul className="mt-2 list-disc pl-5 text-xs">
+                    <li>Navigating to the tour page</li>
+                    <li>Viewing tour introduction and walkthrough</li>
+                    <li>Exploring tour video gallery</li>
+                  </ul>
                 </figcaption>
               </figure>
             </div>
