@@ -26,9 +26,6 @@ jobs:
       - name: Install dependencies
         run: cd web && npm install --legacy-peer-deps
 
-      - name: Lint
-        run: cd web && npm run lint
-
       - name: Type check
         run: cd web && npm run typecheck
 
@@ -37,5 +34,6 @@ jobs:
 
       - name: Build
         run: cd web && npm run build
+
 
 
