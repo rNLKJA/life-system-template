@@ -9,13 +9,13 @@
 }
 
 html {
-  background: white;
-  color: black;
+  background: #faf9fc;
+  color: #1f2029;
 }
 
 html.dark {
-  background: black;
-  color: white;
+  background: #0f0e12;
+  color: #f8f8f2;
 }
 
 body {
