@@ -6,11 +6,11 @@ on:
 
 jobs:
   selftest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Template works from a clean copy (or, once initialised, the vault still passes its checks)
-        run: bash scripts/selftest.sh
+        run: bash original/scripts/selftest.sh
