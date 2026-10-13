@@ -40,34 +40,34 @@ export function VaultNavigator() {
   const [expanded, setExpanded] = useState<string | null>(null)
 
   return (
-    <div className="space-y-4">
-      <div className="border border-black bg-white p-4 dark:border-white dark:bg-black">
-        <h2 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider">
-          Vault Structure
-        </h2>
-        <div className="grid gap-3">
-          {vaultFolders.map((folder) => (
-            <button
-              key={folder.name}
-              onClick={() =>
-                setExpanded(expanded === folder.name ? null : folder.name)
-              }
-              className="flex items-start gap-3 border border-black p-3 text-left transition-colors hover:bg-accent hover:text-white dark:border-white dark:hover:bg-accent"
-            >
-              <span className="dot-matrix text-lg">{folder.icon}</span>
-              <div className="flex-1">
-                <div className="font-mono font-bold uppercase tracking-wider">
-                  {folder.name}
-                </div>
-                {expanded === folder.name && (
-                  <div className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-                    {folder.description}
-                  </div>
-                )}
+    <div className="rounded-xl border border-white/10 bg-card p-card">
+      <h3 className="mb-6 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted-foreground">
+        Vault Structure
+      </h3>
+      <div className="grid gap-3">
+        {vaultFolders.map((folder) => (
+          <button
+            key={folder.name}
+            onClick={() =>
+              setExpanded(expanded === folder.name ? null : folder.name)
+            }
+            className="flex items-start gap-3 rounded-lg border border-border bg-muted/30 p-4 text-left transition-colors hover:border-primary/50 hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-primary/30 bg-primary/10">
+              <span className="font-mono text-lg font-semibold text-primary">{folder.icon}</span>
+            </div>
+            <div className="flex-1">
+              <div className="font-display text-lg font-semibold text-foreground">
+                {folder.name}
               </div>
-            </button>
-          ))}
-        </div>
+              {expanded === folder.name && (
+                <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {folder.description}
+                </div>
+              )}
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   )

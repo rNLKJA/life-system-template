@@ -2,34 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*
+ * Design tokens. Light mode: warm paper with neutral base (cooler than lavender, warmer than pure gray).
+ * Dark mode: deep warm near-black with violet accent.
+ */
+:root {
+  --radius: 0.75rem;
+  --background: 25 18% 94%;
+  --foreground: 25 12% 12%;
+  --card: 25 22% 97%;
+  --card-foreground: 25 12% 12%;
+  --popover: 25 22% 97%;
+  --popover-foreground: 25 12% 12%;
+  --primary: 265 50% 58%;
+  --primary-foreground: 25 22% 99%;
+  --secondary: 25 15% 91%;
+  --secondary-foreground: 25 12% 12%;
+  --muted: 25 14% 90%;
+  --muted-foreground: 25 10% 40%;
+  --accent: 265 50% 58%;
+  --accent-foreground: 25 22% 99%;
+  --destructive: 355 68% 42%;
+  --success: 146 66% 26%;
+  --warning: 31 100% 33%;
+  --info: 193 86% 29%;
+  --border: 25 14% 84%;
+  --input: 25 14% 84%;
+  --ring: 265 50% 58%;
+  --deep: 25 16% 92%;
 }
 
-html {
-  background: #faf9fc;
-  color: #1f2029;
+.dark {
+  --background: 240 14% 14%;
+  --foreground: 60 30% 96%;
+  --card: 240 16% 18%;
+  --card-foreground: 60 30% 96%;
+  --popover: 240 16% 20%;
+  --popover-foreground: 60 30% 96%;
+  --primary: 265 85% 78%;
+  --primary-foreground: 240 16% 18%;
+  --secondary: 240 10% 20%;
+  --secondary-foreground: 60 30% 96%;
+  --muted: 240 10% 20%;
+  --muted-foreground: 232 14% 72%;
+  --accent: 265 85% 78%;
+  --accent-foreground: 240 16% 18%;
+  --destructive: 0 100% 71%;
+  --success: 135 94% 65%;
+  --warning: 31 100% 71%;
+  --info: 191 97% 77%;
+  --border: 240 7% 26%;
+  --input: 240 7% 26%;
+  --ring: 265 85% 78%;
+  --deep: 240 18% 13%;
 }
 
-html.dark {
-  background: #0f0e12;
-  color: #f8f8f2;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: color-mix(in oklab, hsl(var(--primary)) 30%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
+@layer components {
+  .font-display {
+    font-family: var(--font-display-face), ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.015em;
+  }
 
-code, pre {
-  font-family: 'Courier New', monospace;
-}
+  .kicker {
+    font-family: var(--font-code-face), ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
 
-@layer utilities {
-  .dot-matrix {
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    letter-spacing: 0.05em;
+  .arch {
+    border-radius: 999px 999px 1.25rem 1.25rem;
+  }
+
+  .grain {
+    background-image: radial-gradient(
+      color-mix(in oklab, hsl(var(--foreground)) 7%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 18px 18px;
   }
 }
