@@ -14,7 +14,7 @@ describe('VaultNavigator', () => {
   it('displays folder names', () => {
     render(<VaultNavigator />)
     const buttons = screen.getAllByRole('button')
-    expect(buttons.length).toBe(5)
+    expect(buttons.length).toBe(6)
   })
 })
 
