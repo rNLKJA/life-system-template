@@ -37,7 +37,7 @@ export default function Home() {
                 One Obsidian vault. A clear folder hierarchy. Areas hold your ongoing work, projects serve areas, and archives keep what is finished. This is the backbone of a personal operating system that both you and AI agents can understand and maintain together. <strong className="font-semibold text-foreground">AGENTS.md</strong> defines how all agents work here.
               </p>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-                I built this because I was tired of instructions that drifted between agents, memory that rotted, and vaults where I could not find anything three months later. This is the structure I use every day.
+                I built this as a starting structure for a personal knowledge vault that both I and AI agents can read: one AGENTS.md for instructions, plain folders for notes, and nothing clever in between.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
