@@ -27,20 +27,91 @@ ROOT = Path(__file__).resolve().parents[1]
 WIKI = re.compile(r"!?\[\[([^\]\|#\^]+)(?:[#\^][^\]\|]*)?(?:\|[^\]]*)?\]\]")
 MDL = re.compile(r"(?<!!)\[[^\]\n]*\]\(\s*<?([^)>\s]+)>?\s*\)")
 CODE = re.compile(r"```.*?```|~~~.*?~~~|`[^`\n]*`", re.S)
-TERM = re.compile(r'(-?)(path|file):(/(?:[^/\\]|\\.)+/|"[^"]*"|\S+)|(-?)\[([^:\]]+):([^\]]+)\]|(\S+)')
+TERM = re.compile(r'(-?)(path|file):(/(?:[^\\/\[]|\\.|\[[^\]]*\])+/|"[^"]*"|\S+)|(-?)\[([^:\]]+):([^\]]+)\]|(\S+)')
 
 
 def parse_filter(q: str):
+    """Parse Obsidian graph filter syntax.
+
+    Handles -path:/regex/ -file:/regex/ -[prop:value] and ignores other terms.
+    For /regex/ patterns, we need to find the closing / carefully since the regex
+    itself may contain / inside character classes or after quantifiers.
+    """
     terms, ignored = [], []
-    for m in TERM.finditer(q or ""):
-        if m.group(2):
-            val = m.group(3)
-            rx = re.compile(val[1:-1], re.I) if val.startswith("/") and val.endswith("/") and len(val) > 1 else None
-            terms.append(("neg" if m.group(1) else "pos", m.group(2), rx, val.strip('"').lower()))
-        elif m.group(5):
-            terms.append(("neg" if m.group(4) else "pos", "prop", (m.group(5).strip('"'), m.group(6).strip('"')), None))
-        elif m.group(7):
-            ignored.append(m.group(7))
+    i = 0
+    while i < len(q):
+        # Skip whitespace
+        while i < len(q) and q[i].isspace():
+            i += 1
+        if i >= len(q):
+            break
+
+        # Check for -[prop:value]
+        if q[i:i+2] == '-[':
+            m = re.match(r'-\[([^:\]]+):([^\]]+)\]', q[i:])
+            if m:
+                terms.append(("neg", "prop", (m.group(1).strip('"'), m.group(2).strip('"')), None))
+                i += m.end()
+                continue
+
+        # Check for -(path|file):/regex/ or -(path|file):text
+        m = re.match(r'(-?)(path|file):', q[i:])
+        if m:
+            neg = m.group(1) == '-'
+            kind = m.group(2)
+            i += m.end()
+
+            # Now parse the value: /regex/ or "quoted" or unquoted
+            if i < len(q) and q[i] == '/':
+                # Find matching closing / by counting depth
+                j = i + 1
+                while j < len(q):
+                    if q[j] == '\\' and j + 1 < len(q):
+                        j += 2  # skip escaped char
+                    elif q[j] == '/' and (j + 1 >= len(q) or q[j+1] in ' -'):
+                        # Found closing / followed by space or - or end
+                        val = q[i:j+1]
+                        rx = None
+                        try:
+                            rx = re.compile(val[1:-1], re.I)
+                        except re.error:
+                            pass
+                        terms.append(("neg" if neg else "pos", kind, rx, val))
+                        i = j + 1
+                        break
+                    else:
+                        j += 1
+                else:
+                    # No closing / found, skip this term
+                    i = j
+            elif i < len(q) and q[i] == '"':
+                # Quoted value
+                j = q.find('"', i + 1)
+                if j > 0:
+                    val = q[i:j+1]
+                    terms.append(("neg" if neg else "pos", kind, None, val.strip('"').lower()))
+                    i = j + 1
+                else:
+                    i += 1
+            else:
+                # Unquoted value until space
+                j = i
+                while j < len(q) and not q[j].isspace():
+                    j += 1
+                if j > i:
+                    val = q[i:j]
+                    terms.append(("neg" if neg else "pos", kind, None, val.lower()))
+                i = j
+            continue
+
+        # Check for other terms (ignored)
+        m = re.match(r'\S+', q[i:])
+        if m:
+            ignored.append(m.group(0))
+            i += m.end()
+        else:
+            i += 1
+
     return terms, ignored
 
 
