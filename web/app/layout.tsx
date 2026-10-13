@@ -52,7 +52,7 @@ export default function RootLayout({
     <html
       lang="en-AU"
       suppressHydrationWarning
-      className={`dark ${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a
