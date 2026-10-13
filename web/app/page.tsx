@@ -36,6 +36,9 @@ export default function Home() {
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl sm:leading-relaxed">
                 One Obsidian vault. A clear folder hierarchy. Areas hold your ongoing work, projects serve areas, and archives keep what is finished. This is the backbone of a personal operating system that both you and AI agents can understand and maintain together. <strong className="font-semibold text-foreground">AGENTS.md</strong> defines how all agents work here.
               </p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+                I built this because I was tired of instructions that drifted between agents, memory that rotted, and vaults where I could not find anything three months later. This is the structure I use every day.
+              </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="https://github.com/rNLKJA/life-system-template"
@@ -202,6 +205,12 @@ export default function Home() {
             <p className="mt-4 leading-relaxed text-muted-foreground">
               <strong className="text-foreground">Provenance.</strong> Everything here is plain Markdown that you, your team and your AI agents can read and update together. The folder structure follows the PARA method (Projects, Areas, Resources, Archives) adapted for AI collaboration.
             </p>
+            <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4">
+              <h3 className="font-display text-lg font-semibold text-foreground">What I learned</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Building this taught me that the structure matters more than the tools. A good naming convention is worth a thousand tags. The 300-line ceiling on memory files forces you to archive what is no longer current, and that discipline alone makes agents far more useful. The append-only log turned out to be the one source of truth I could always trust.
+              </p>
+            </div>
           </div>
           <div className="grid content-start gap-4">
             <div className="rounded-3xl border border-white/10 bg-card p-6">
@@ -274,7 +283,7 @@ export default function Home() {
               href="https://rin.contact"
               className="text-primary hover:underline"
             >
-              Designed at rin.contact
+              Made by Rin in Adelaide
             </a>
           </p>
           <p className="mt-2">MIT Licence</p>
