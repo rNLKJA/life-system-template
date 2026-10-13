@@ -1,24 +1,29 @@
 export default function TourPage() {
   return (
-    <main className="flex min-h-screen flex-col">
-      <header className="border-b border-black px-6 py-8 dark:border-white">
+    <div className="flex min-h-screen flex-col">
+      <header className="border-b border-white/10 px-4 py-8 sm:px-6">
         <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl font-bold tracking-tight">Guided Tour</h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+          <div className="font-mono text-[0.72rem] uppercase tracking-[0.14em] text-primary">
+            Explore
+          </div>
+          <h1 className="mt-3 font-display text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
+            Guided Tour
+          </h1>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
             Explore the life-system-template
           </p>
         </div>
       </header>
 
-      <div className="flex-1 px-6 py-12">
+      <div className="flex-1 px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-4xl space-y-12">
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
+          <section className="rounded-xl border border-white/10 bg-card p-card">
+            <h2 className="mb-6 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted-foreground">
               Walkthrough Videos
             </h2>
             <div className="space-y-8">
               <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
+                <div className="mb-3 overflow-hidden rounded-lg border border-border">
                   <video
                     controls
                     width="1280"
@@ -36,9 +41,9 @@ export default function TourPage() {
                     />
                   </video>
                 </div>
-                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Landing page walkthrough</strong>
-                  <ul className="mt-2 list-disc pl-5 text-xs">
+                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                  <strong className="text-foreground">Landing page walkthrough</strong>
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
                     <li>Landing on life-system-template home page</li>
                     <li>Viewing the hero section and feature cards</li>
                     <li>Exploring the vault structure navigator</li>
@@ -47,7 +52,7 @@ export default function TourPage() {
               </figure>
 
               <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
+                <div className="mb-3 overflow-hidden rounded-lg border border-border">
                   <video
                     controls
                     width="1280"
@@ -65,9 +70,9 @@ export default function TourPage() {
                     />
                   </video>
                 </div>
-                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Features overview</strong>
-                  <ul className="mt-2 list-disc pl-5 text-xs">
+                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                  <strong className="text-foreground">Features overview</strong>
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
                     <li>Scrolling to the features section</li>
                     <li>Reading feature cards: Agent Contract, Areas, Memory</li>
                     <li>Viewing Privacy by Convention details</li>
@@ -76,7 +81,7 @@ export default function TourPage() {
               </figure>
 
               <figure>
-                <div className="mb-3 overflow-hidden border border-gray-300 dark:border-gray-700">
+                <div className="mb-3 overflow-hidden rounded-lg border border-border">
                   <video
                     controls
                     width="1280"
@@ -94,9 +99,9 @@ export default function TourPage() {
                     />
                   </video>
                 </div>
-                <figcaption className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Tour page exploration</strong>
-                  <ul className="mt-2 list-disc pl-5 text-xs">
+                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                  <strong className="text-foreground">Tour page exploration</strong>
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
                     <li>Navigating to the tour page</li>
                     <li>Viewing tour introduction and walkthrough</li>
                     <li>Exploring tour video gallery</li>
@@ -106,26 +111,26 @@ export default function TourPage() {
             </div>
           </section>
 
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
+          <section className="rounded-xl border border-white/10 bg-card p-card">
+            <h2 className="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted-foreground">
               What is a life system?
             </h2>
-            <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
               A life system is a set of interconnected notes and folders that hold your
               goals, projects, areas of responsibility and the papers that support them.
               It is shared between you and your AI agents.
             </p>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               The key insight is that everything is Markdown: plain text that both humans
               and agents can read, update and understand.
             </p>
           </section>
 
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
+          <section className="rounded-xl border border-white/10 bg-card p-card">
+            <h2 className="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted-foreground">
               Example Structure
             </h2>
-            <pre className="overflow-x-auto rounded bg-gray-100 p-4 font-mono text-xs dark:bg-gray-900">
+            <pre className="overflow-x-auto rounded-lg bg-muted/30 p-4 font-mono text-xs text-foreground">
 {`My Life/
 ├─ Areas/
 │  ├─ Career/
@@ -141,11 +146,11 @@ export default function TourPage() {
             </pre>
           </section>
 
-          <section className="border border-black p-6 dark:border-white">
-            <h2 className="mb-4 font-mono font-bold uppercase tracking-wider">
+          <section className="rounded-xl border border-white/10 bg-card p-card">
+            <h2 className="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted-foreground">
               Getting Started
             </h2>
-            <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <div className="space-y-2 text-sm leading-relaxed text-muted-foreground">
               <p>1. Clone the template as your own repository</p>
               <p>2. Run the initialisation script to configure your areas</p>
               <p>3. Open the folder in Obsidian</p>
@@ -155,15 +160,15 @@ export default function TourPage() {
         </div>
       </div>
 
-      <footer className="border-t border-black px-6 py-8 dark:border-white">
-        <div className="mx-auto max-w-4xl text-center text-sm text-gray-600 dark:text-gray-400">
+      <footer className="border-t border-white/10 px-4 py-8 sm:px-6">
+        <div className="mx-auto max-w-4xl text-center text-sm text-muted-foreground">
           <p>
-            <a href="/" className="hover:text-accent underline">
+            <a href="/" className="text-primary hover:underline">
               Back to home
             </a>
           </p>
         </div>
       </footer>
-    </main>
+    </div>
   )
 }
