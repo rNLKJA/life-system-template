@@ -26,25 +26,26 @@ export default function Home() {
 
         <main id="main">
           {/* Hero */}
-          <section className="mx-auto grid max-w-6xl items-center gap-14 px-4 pt-20 pb-28 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-28 lg:pb-36">
+          <section className="mx-auto grid max-w-6xl items-center gap-16 px-4 pt-28 pb-36 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 lg:pt-40 lg:pb-48">
             <div>
-              <h1 className="font-display text-[clamp(3rem,7vw,4.5rem)] leading-[1.02] font-semibold tracking-tight">
+              <p className="kicker text-primary">Personal life OS</p>
+              <h1 className="mt-4 font-display text-[2.75rem] leading-[1.08] font-bold tracking-tight sm:text-7xl lg:text-[6rem] lg:leading-[1.03]">
                 A shared vault for you and your{' '}
                 <em className="text-primary not-italic">AI agents</em>.
               </h1>
-              <p className="mt-8 max-w-xl text-base leading-[1.75] text-muted-foreground sm:text-lg sm:leading-[1.8]">
+              <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl sm:leading-relaxed">
                 One Obsidian vault. A clear folder hierarchy. Areas hold your ongoing work, projects serve areas, and archives keep what is finished. This is the backbone of a personal operating system that both you and AI agents can understand and maintain together. <strong className="font-semibold text-foreground">AGENTS.md</strong> defines how all agents work here.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="https://github.com/rNLKJA/life-system-template"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-[0.95rem] font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:translate-y-0"
+                  className="group relative inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[0.95rem] font-semibold text-primary-foreground shadow-lg shadow-primary/25 ring-1 ring-inset ring-white/10 transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:translate-y-0"
                 >
                   Clone the template
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-secondary px-6 text-[0.95rem] font-medium text-secondary-foreground transition-all hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-secondary/50 backdrop-blur-sm px-7 text-[0.95rem] font-medium text-secondary-foreground transition-all hover:bg-secondary hover:border-primary/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                 >
                   Learn more
                 </a>
@@ -60,7 +61,7 @@ export default function Home() {
                 </a>
               </p>
             </div>
-            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none lg:scale-110">
               <HeroArtwork />
               <FloatingCard />
             </div>
@@ -71,7 +72,7 @@ export default function Home() {
       {/* Features */}
       <section
         aria-labelledby="features-title"
-        className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6"
+        className="mx-auto w-full max-w-6xl px-4 py-28 sm:px-6 sm:py-32"
       >
         <p className="kicker text-primary">Building blocks</p>
         <h2
@@ -80,7 +81,7 @@ export default function Home() {
         >
           What you get
         </h2>
-        <ol className="mt-10 grid gap-4 md:grid-cols-2">
+        <ol className="mt-12 grid gap-6 md:grid-cols-2">
           <li className="relative rounded-3xl border border-white/10 bg-card p-6">
             <span className="absolute top-5 right-6 font-mono text-sm text-muted-foreground">
               01

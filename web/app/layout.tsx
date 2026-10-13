@@ -5,7 +5,7 @@ import './globals.css'
 // Self-hosted fonts from @fontsource-variable (OFL; licences in ./fonts)
 const display = localFont({
   src: './fonts/fraunces-latin-opsz-normal.woff2',
-  variable: '--font-display-face',
+  variable: '--font-display',
   weight: '100 900',
   style: 'normal',
   display: 'swap',
@@ -13,7 +13,7 @@ const display = localFont({
 
 const body = localFont({
   src: './fonts/geist-latin-wght-normal.woff2',
-  variable: '--font-body-face',
+  variable: '--font-body',
   weight: '100 900',
   style: 'normal',
   display: 'swap',
@@ -21,7 +21,7 @@ const body = localFont({
 
 const mono = localFont({
   src: './fonts/jetbrains-mono-latin-wght-normal.woff2',
-  variable: '--font-code-face',
+  variable: '--font-code',
   weight: '100 800',
   style: 'normal',
   display: 'swap',
@@ -52,7 +52,7 @@ export default function RootLayout({
     <html
       lang="en-AU"
       suppressHydrationWarning
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
+      className={`dark ${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a
