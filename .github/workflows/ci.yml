@@ -17,23 +17,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: 'web/package-lock.json'
+          cache: 'pnpm'
+          cache-dependency-path: 'web/pnpm-lock.yaml'
 
       - name: Install dependencies
-        run: cd web && npm install --legacy-peer-deps
+        run: cd web && pnpm install --frozen-lockfile
 
       - name: Type check
-        run: cd web && npm run typecheck
+        run: cd web && pnpm run typecheck
 
       - name: Test
-        run: cd web && npm test
+        run: cd web && pnpm test
 
       - name: Build
-        run: cd web && npm run build
+        run: cd web && pnpm run build
 
 
 
