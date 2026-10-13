@@ -106,6 +106,6 @@ graph LR
 
 ## Credits and licence
 
-Adapted from Rin Huang's life-system vault. MIT licence; see `LICENSE`.
+This is the generic version of a structure I use every day, with every personal detail taken out. MIT licence; see `LICENSE`.
 
 Built with [Claude Code](https://claude.com/claude-code).
