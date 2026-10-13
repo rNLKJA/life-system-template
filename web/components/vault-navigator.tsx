@@ -34,10 +34,16 @@ const vaultFolders: VaultFolder[] = [
     description: 'Finished projects, old papers and code',
     icon: '-',
   },
+  {
+    name: 'Resources',
+    description: 'Templates, guides, the project kit',
+    icon: '~',
+  },
 ]
 
 export function VaultNavigator() {
   const [expanded, setExpanded] = useState<string | null>(null)
+  const [hoveredFolder, setHoveredFolder] = useState<string | null>(null)
 
   return (
     <div className="rounded-xl border border-white/10 bg-card p-card">
@@ -51,6 +57,10 @@ export function VaultNavigator() {
             onClick={() =>
               setExpanded(expanded === folder.name ? null : folder.name)
             }
+            onMouseEnter={() => setHoveredFolder(folder.name)}
+            onMouseLeave={() => setHoveredFolder(null)}
+            onFocus={() => setHoveredFolder(folder.name)}
+            onBlur={() => setHoveredFolder(null)}
             className="flex items-start gap-3 rounded-lg border border-border bg-muted/30 p-4 text-left transition-colors hover:border-primary/50 hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-primary/30 bg-primary/10">
@@ -60,7 +70,7 @@ export function VaultNavigator() {
               <div className="font-display text-lg font-semibold text-foreground">
                 {folder.name}
               </div>
-              {expanded === folder.name && (
+              {(expanded === folder.name || hoveredFolder === folder.name) && (
                 <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {folder.description}
                 </div>

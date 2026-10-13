@@ -166,6 +166,10 @@ export default function TourPage() {
             <a href="/" className="text-primary hover:underline">
               Back to home
             </a>
+            {' · '}
+            <a href="https://rin.contact" className="text-primary hover:underline">
+              Made by Rin in Adelaide
+            </a>
           </p>
         </div>
       </footer>
