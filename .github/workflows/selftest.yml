@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Template works from a clean copy (or, once initialised, the vault still passes its checks)
-        run: bash scripts/selftest.sh
+        run: bash original/scripts/selftest.sh
