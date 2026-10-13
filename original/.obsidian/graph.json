@@ -1,5 +1,5 @@
 {
-  "search": "-path:/^(Scratch|External)\\// -[type:index] -[type:feed] -path:/^(?!README\\.md$)(?!(?:.*/)?([^/]+)/\u0001\\.md$)(?:.*/)?(AGENTS|CLAUDE|MEMORY|LOG|TASKS|PROJECT|ARCHIVE|INBOX|CHANGELOG|CONVERSATION-LOG|STATUS|SOURCES|CATALOG|SKILL|SKILLS|VERSION|CONTRIBUTING|LICENSE|README)\\.md$/ -file:/\\.base$/",
+  "search": "-path:/^(Scratch|External)\\// -[type:index] -[type:feed] -path:/^(?!README\\.md$)(?!(?:.*/)?([^/]+)/\\1\\.md$)(?:.*/)?(AGENTS|CLAUDE|MEMORY|LOG|TASKS|PROJECT|ARCHIVE|INBOX|CHANGELOG|CONVERSATION-LOG|STATUS|SOURCES|CATALOG|SKILL|SKILLS|VERSION|CONTRIBUTING|LICENSE|README)\\.md$/ -file:/\\.base$/",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
