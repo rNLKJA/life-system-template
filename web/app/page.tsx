@@ -28,7 +28,7 @@ export default function Home() {
           {/* Hero */}
           <section className="mx-auto grid max-w-6xl items-center gap-14 px-4 pt-20 pb-32 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-32 lg:pb-40">
             <div>
-              <h1 className="font-serif text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+              <h1 className="font-display text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-[4.5rem]">
                 Life System Template
               </h1>
               <p className="mt-12 max-w-xl text-lg leading-relaxed text-muted-foreground">
