@@ -21,7 +21,7 @@ export function FloatingCard() {
             <span className="font-mono">Active</span>
           </div>
           <span>·</span>
-          <span className="font-mono">679 bytes</span>
+          <span className="font-mono">9,509 bytes</span>
         </div>
       </div>
     </div>

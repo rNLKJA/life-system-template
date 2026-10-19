@@ -27,7 +27,7 @@ export default function Home() {
         {/* Header */}
         <header className="border-b border-white/10 px-4 py-6 sm:px-6">
           <div className="mx-auto max-w-6xl">
-            <p className="kicker text-primary">Personal life OS</p>
+            {/* Intentionally empty — the hero eyebrow below carries the label */}
           </div>
         </header>
 
