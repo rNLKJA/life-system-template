@@ -11,8 +11,8 @@
 }
 
 /*
- * Design tokens. Light mode: warm paper with neutral base (cooler than lavender, warmer than pure gray).
- * Dark mode: deep warm near-black with violet accent.
+ * Design tokens. Light mode: warm paper with neutral base.
+ * Dark mode: stepped tonal ladder from near-black with violet accent, following Cradle's pattern.
  */
 :root {
   --radius: 0.75rem;
@@ -42,17 +42,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: 231 15% 15%;
+    /* Stepped surfaces from deep to lighter, tinted with violet */
+    --surface-1: 235 19% 6%;
+    --surface-2: 234 18% 10%;
+    --surface-3: 235 17% 14%;
+    --surface-4: 233 16% 18%;
+    --surface-5: 232 15% 22%;
+
+    --background: 233 16% 13%;
     --foreground: 60 30% 96%;
-    --card: 235 16% 19%;
+    --card: 235 16% 17%;
     --card-foreground: 60 30% 96%;
-    --popover: 232 14% 20%;
+    --popover: 235 16% 18%;
     --popover-foreground: 60 30% 96%;
     --primary: 265 85% 78%;
-    --primary-foreground: 235 19% 14%;
-    --secondary: 232 12% 23%;
+    --primary-foreground: 235 19% 10%;
+    --secondary: 233 13% 21%;
     --secondary-foreground: 60 30% 96%;
-    --muted: 231 13% 21%;
+    --muted: 233 14% 19%;
     --muted-foreground: 230 14% 72%;
     --accent: 265 85% 78%;
     --accent-foreground: 60 30% 96%;
@@ -60,15 +67,10 @@
     --success: 135 94% 65%;
     --warning: 31 100% 71%;
     --info: 191 97% 77%;
-    --border: 232 10% 27%;
-    --input: 235 13% 32%;
+    --border: 232 11% 24%;
+    --input: 234 12% 28%;
     --ring: 265 85% 78%;
-    --deep: 235 19% 12%;
-    --surface-1: 235 19% 12%;
-    --surface-2: 233 17% 16%;
-    --surface-3: 235 16% 19%;
-    --surface-4: 232 14% 22%;
-    --surface-5: 231 13% 25%;
+    --deep: 235 19% 10%;
   }
 }
 
