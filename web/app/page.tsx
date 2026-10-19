@@ -27,17 +27,17 @@ export default function Home() {
 
         <main id="main">
           {/* Hero */}
-          <section className="mx-auto grid max-w-6xl items-center gap-14 px-4 pt-10 pb-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-16 lg:pb-28">
+          <section className="mx-auto grid max-w-6xl items-center gap-14 px-4 pt-16 pb-24 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-32">
             <div>
               <p className="kicker text-primary">Personal life OS</p>
-              <h1 className="mt-4 font-display text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+              <h1 className="mt-4 font-display text-6xl leading-[1.02] font-semibold tracking-tight sm:text-7xl lg:text-[5.5rem]">
                 A shared vault for you and your{' '}
                 <em className="text-primary not-italic">AI agents</em>.<span aria-hidden="true" className="select-none opacity-0">LS</span>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-8 max-w-xl text-xl leading-relaxed text-muted-foreground">
                 One Obsidian vault. A clear folder hierarchy. Areas hold your ongoing work, projects serve areas, and archives keep what is finished. This is the backbone of a personal operating system that both you and AI agents can understand and maintain together.
               </p>
-              <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 I built this as a starting structure for a personal knowledge vault that both I and AI agents can read: one <strong className="font-semibold text-foreground">AGENTS.md</strong> for instructions, plain folders for notes, and nothing clever in between.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -98,56 +98,56 @@ export default function Home() {
       {/* Features */}
       <section
         aria-labelledby="features-title"
-        className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6"
+        className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6"
       >
         <p className="kicker text-primary">Building blocks</p>
         <h2
           id="features-title"
-          className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight"
+          className="mt-3 max-w-2xl font-display text-5xl font-semibold tracking-tight"
         >
           What you get
         </h2>
-        <ol className="mt-10 grid gap-4 md:grid-cols-3">
-          <li className="relative rounded-3xl border border-white/10 bg-card p-6">
-            <span className="absolute top-5 right-6 font-mono text-sm text-muted-foreground">
+        <ol className="mt-12 grid gap-5 md:grid-cols-3">
+          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+            <span className="absolute top-6 right-7 font-mono text-sm text-muted-foreground">
               01
             </span>
-            <FileCode2 className="size-7 text-primary" aria-hidden="true" />
-            <h3 className="mt-5 font-display text-2xl font-semibold">Agent Contract</h3>
-            <p className="mt-2 leading-relaxed text-muted-foreground">
+            <FileCode2 className="size-8 text-primary" aria-hidden="true" />
+            <h3 className="mt-6 font-display text-2xl font-semibold">Agent Contract</h3>
+            <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">
               One <strong className="font-semibold text-foreground">AGENTS.md</strong> at the root defines how all agents work here: precedence, planning, memory, logging and naming.
             </p>
           </li>
-          <li className="relative rounded-3xl border border-white/10 bg-card p-6">
-            <span className="absolute top-5 right-6 font-mono text-sm text-muted-foreground">
+          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+            <span className="absolute top-6 right-7 font-mono text-sm text-muted-foreground">
               02
             </span>
-            <FolderTree className="size-7 text-primary" aria-hidden="true" />
-            <h3 className="mt-5 font-display text-2xl font-semibold">Areas as the Backbone</h3>
-            <p className="mt-2 leading-relaxed text-muted-foreground">
+            <FolderTree className="size-8 text-primary" aria-hidden="true" />
+            <h3 className="mt-6 font-display text-2xl font-semibold">Areas as the Backbone</h3>
+            <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">
               Areas hold your ongoing responsibilities (career, money, home, health), projects serve areas, archives hold what is finished.
             </p>
           </li>
-          <li className="relative rounded-3xl border border-white/10 bg-card p-6">
-            <span className="absolute top-5 right-6 font-mono text-sm text-muted-foreground">
+          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+            <span className="absolute top-6 right-7 font-mono text-sm text-muted-foreground">
               03
             </span>
-            <BookOpen className="size-7 text-primary" aria-hidden="true" />
-            <h3 className="mt-5 font-display text-2xl font-semibold">Smart Memory</h3>
-            <p className="mt-2 leading-relaxed text-muted-foreground">
+            <BookOpen className="size-8 text-primary" aria-hidden="true" />
+            <h3 className="mt-6 font-display text-2xl font-semibold">Smart Memory</h3>
+            <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">
               MEMORY.md stays small (300-line ceiling). LOG.md is append-only. ARCHIVE.md holds what used to be true. INBOX.md for later.
             </p>
           </li>
         </ol>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
           <Link
             href="#explore"
-            className="group flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-6 transition-colors hover:border-primary/50"
+            className="group flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 transition-colors hover:border-primary/50"
           >
-            <Folder className="size-8 shrink-0 text-primary" aria-hidden="true" />
+            <Folder className="size-9 shrink-0 text-primary" aria-hidden="true" />
             <span>
-              <span className="block font-semibold">Six top-level folders</span>
-              <span className="text-sm text-muted-foreground">
+              <span className="block text-lg font-semibold">Six top-level folders</span>
+              <span className="mt-1 block text-[0.9375rem] text-muted-foreground">
                 Areas, Projects, HQ, Knowledge, Archive and Resources.
               </span>
             </span>
@@ -156,11 +156,11 @@ export default function Home() {
               aria-hidden="true"
             />
           </Link>
-          <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-6">
-            <ShieldCheck className="size-8 shrink-0 text-success" aria-hidden="true" />
+          <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+            <ShieldCheck className="size-9 shrink-0 text-success" aria-hidden="true" />
             <span>
-              <span className="block font-semibold">Privacy by convention</span>
-              <span className="text-sm text-muted-foreground">
+              <span className="block text-lg font-semibold">Privacy by convention</span>
+              <span className="mt-1 block text-[0.9375rem] text-muted-foreground">
                 Any folder named Records/ is gitignored, so personal papers never reach GitHub.
               </span>
             </span>
@@ -174,15 +174,15 @@ export default function Home() {
         aria-labelledby="explore-title"
         className="scroll-mt-20 border-y border-white/10 bg-deep"
       >
-        <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
+        <div className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
           <p className="kicker text-primary">Explore</p>
           <h2
             id="explore-title"
-            className="mt-3 font-display text-4xl font-semibold tracking-tight"
+            className="mt-3 font-display text-5xl font-semibold tracking-tight"
           >
             Browse the template
           </h2>
-          <div className="mt-8">
+          <div className="mt-10">
             <VaultNavigator />
           </div>
         </div>
@@ -191,16 +191,16 @@ export default function Home() {
       {/* Getting Started */}
       <section
         aria-labelledby="start-title"
-        className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6"
+        className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6"
       >
         <p className="kicker text-primary">Getting started</p>
         <h2
           id="start-title"
-          className="mt-3 font-display text-4xl font-semibold tracking-tight"
+          className="mt-3 font-display text-5xl font-semibold tracking-tight"
         >
           Three commands to set up your vault.
         </h2>
-        <div className="mt-8 rounded-3xl border border-white/10 bg-card p-6">
+        <div className="mt-10 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
           <div className="grid gap-4 md:grid-cols-3">
             <div>
               <span className="kicker text-muted-foreground">Step 1</span>
@@ -231,10 +231,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-card p-5">
-            <FileText className="size-7 text-primary" aria-hidden="true" />
-            <h3 className="mt-4 font-display text-xl font-semibold">Core files</h3>
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-card p-7 shadow-xl shadow-black/5">
+            <FileText className="size-8 text-primary" aria-hidden="true" />
+            <h3 className="mt-5 font-display text-2xl font-semibold">Core files</h3>
             <dl className="mt-3 space-y-2 text-sm">
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">Contract</dt>
@@ -254,9 +254,9 @@ export default function Home() {
               </div>
             </dl>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-card p-5">
-            <CheckCircle2 className="size-7 text-success" aria-hidden="true" />
-            <h3 className="mt-4 font-display text-xl font-semibold">Then open it</h3>
+          <div className="rounded-3xl border border-white/10 bg-card p-7 shadow-xl shadow-black/5">
+            <CheckCircle2 className="size-8 text-success" aria-hidden="true" />
+            <h3 className="mt-5 font-display text-2xl font-semibold">Then open it</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Open the folder as a vault in Obsidian and start your agent session. Agents will read AGENTS.md and follow the system you define.
             </p>
@@ -273,12 +273,12 @@ export default function Home() {
         aria-labelledby="about-title"
         className="scroll-mt-20 border-t border-white/10 bg-deep"
       >
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1fr]">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[1fr_1fr]">
           <div>
             <p className="kicker text-primary">About this template</p>
             <h2
               id="about-title"
-              className="mt-3 font-display text-4xl font-semibold tracking-tight"
+              className="mt-3 font-display text-5xl font-semibold tracking-tight"
             >
               A file-based personal OS.
             </h2>
@@ -288,15 +288,15 @@ export default function Home() {
             <p className="mt-4 leading-relaxed text-muted-foreground">
               <strong className="text-foreground">Provenance.</strong> Everything here is plain Markdown that you, your team and your AI agents can read and update together. The folder structure follows the PARA method (Projects, Areas, Resources, Archives) adapted for AI collaboration.
             </p>
-            <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-5">
-              <h3 className="font-display text-xl font-semibold text-foreground">What I learned</h3>
+            <div className="mt-7 rounded-3xl border border-primary/20 bg-primary/5 p-7 shadow-xl shadow-primary/5">
+              <h3 className="font-display text-2xl font-semibold text-foreground">What I learned</h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 Building this taught me that the structure matters more than the tools. A good naming convention is worth a thousand tags. The 300-line ceiling on memory files forces you to archive what is no longer current, and that discipline alone makes agents far more useful. The append-only log turned out to be the one source of truth I could always trust.
               </p>
             </div>
           </div>
-          <div className="grid content-start gap-4">
-            <div className="rounded-3xl border border-white/10 bg-card p-6">
+          <div className="grid content-start gap-5">
+            <div className="rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
               <h3 className="font-display text-2xl font-semibold">Key principles</h3>
               <ul className="mt-4 space-y-3 text-sm">
                 <li className="flex gap-3">
@@ -325,7 +325,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="rounded-3xl border border-white/10 bg-card p-6">
+            <div className="rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
               <p className="text-sm text-muted-foreground">
                 MIT licence. Built for humans and agents. Deployed at{' '}
                 <a
@@ -341,9 +341,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section aria-labelledby="cta-title" className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-primary/25 via-card to-primary/20 px-6 py-12 text-center sm:px-12">
-          <h2 id="cta-title" className="font-display text-4xl font-semibold tracking-tight">
+      <section aria-labelledby="cta-title" className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-primary/25 via-card to-primary/20 px-8 py-16 text-center shadow-2xl shadow-primary/10 sm:px-12 sm:py-20">
+          <h2 id="cta-title" className="font-display text-5xl font-semibold tracking-tight">
             Start building your vault.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
