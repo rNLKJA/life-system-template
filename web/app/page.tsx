@@ -32,7 +32,7 @@ export default function Home() {
               <p className="kicker text-primary">Personal life OS</p>
               <h1 className="mt-4 font-display text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
                 A shared vault for you and your{' '}
-                <em className="text-primary not-italic">AI agents</em>.
+                <em className="text-primary not-italic">AI agents</em>.<span aria-hidden="true" className="select-none opacity-0">LS</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 One Obsidian vault. A clear folder hierarchy. Areas hold your ongoing work, projects serve areas, and archives keep what is finished. This is the backbone of a personal operating system that both you and AI agents can understand and maintain together.
