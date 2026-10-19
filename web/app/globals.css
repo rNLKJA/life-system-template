@@ -17,7 +17,8 @@
 
 /*
  * Design tokens. Light mode: warm paper with neutral base.
- * Dark mode: stepped tonal ladder from near-black with violet accent, following Cradle's pattern.
+ * Dark mode: near-black stepped surfaces with emerald accent (knowledge, growth, systems thinking).
+ * Multiple bright supporting colours for visual richness.
  */
 :root {
   --radius: 0.75rem;
@@ -27,13 +28,13 @@
   --card-foreground: 25 12% 12%;
   --popover: 25 22% 97%;
   --popover-foreground: 25 12% 12%;
-  --primary: 265 50% 58%;
+  --primary: 158 64% 52%;
   --primary-foreground: 25 22% 99%;
   --secondary: 25 15% 91%;
   --secondary-foreground: 25 12% 12%;
   --muted: 25 14% 90%;
   --muted-foreground: 25 10% 40%;
-  --accent: 265 50% 58%;
+  --accent: 158 64% 52%;
   --accent-foreground: 25 22% 99%;
   --destructive: 355 68% 42%;
   --success: 146 66% 26%;
@@ -41,41 +42,51 @@
   --info: 193 86% 29%;
   --border: 25 14% 84%;
   --input: 25 14% 84%;
-  --ring: 265 50% 58%;
+  --ring: 158 64% 52%;
   --deep: 25 16% 92%;
+
+  /* Additional accent colours for richness */
+  --emerald: 158 64% 52%;
+  --cyan: 191 92% 58%;
+  --amber: 38 92% 58%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Stepped surfaces from deep to lighter, tinted with violet */
-    --surface-1: 235 19% 5%;
-    --surface-2: 234 18% 9%;
-    --surface-3: 235 17% 13%;
-    --surface-4: 233 16% 17%;
-    --surface-5: 232 15% 21%;
+    /* Near-black stepped surfaces, tinted emerald */
+    --surface-1: 165 18% 4%;
+    --surface-2: 164 16% 7%;
+    --surface-3: 163 14% 11%;
+    --surface-4: 162 12% 16%;
+    --surface-5: 161 10% 21%;
 
-    --background: 233 16% 12%;
-    --foreground: 60 30% 97%;
-    --card: 235 16% 16%;
-    --card-foreground: 60 30% 97%;
-    --popover: 235 16% 18%;
-    --popover-foreground: 60 30% 97%;
-    --primary: 265 90% 82%;
-    --primary-foreground: 235 19% 10%;
-    --secondary: 233 13% 20%;
-    --secondary-foreground: 60 30% 97%;
-    --muted: 233 14% 18%;
-    --muted-foreground: 230 14% 75%;
-    --accent: 265 90% 82%;
-    --accent-foreground: 60 30% 97%;
-    --destructive: 0 100% 72%;
-    --success: 135 94% 66%;
-    --warning: 31 100% 72%;
-    --info: 191 97% 78%;
-    --border: 232 11% 23%;
-    --input: 234 12% 27%;
-    --ring: 265 90% 82%;
-    --deep: 235 19% 9%;
+    --background: 164 16% 8%;
+    --foreground: 60 15% 97%;
+    --card: 163 14% 14%;
+    --card-foreground: 60 15% 97%;
+    --popover: 163 12% 16%;
+    --popover-foreground: 60 15% 97%;
+    --primary: 158 84% 66%;
+    --primary-foreground: 165 18% 6%;
+    --secondary: 162 11% 19%;
+    --secondary-foreground: 60 15% 97%;
+    --muted: 163 12% 17%;
+    --muted-foreground: 160 8% 76%;
+    --accent: 158 84% 66%;
+    --accent-foreground: 60 15% 97%;
+    --destructive: 0 84% 72%;
+    --success: 158 84% 66%;
+    --warning: 38 96% 68%;
+    --info: 191 92% 72%;
+    --border: 162 10% 22%;
+    --input: 163 10% 24%;
+    --ring: 158 84% 66%;
+    --deep: 165 18% 6%;
+
+    /* Rich accent palette for visual depth */
+    --emerald: 158 84% 66%;
+    --cyan: 191 92% 72%;
+    --amber: 38 96% 68%;
   }
 }
 
