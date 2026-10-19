@@ -13,9 +13,15 @@ export default function Home() {
           aria-hidden="true"
           className="grain absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]"
         />
+        {/* Primary emerald glow */}
         <div
           aria-hidden="true"
-          className="absolute -top-40 left-1/2 -z-10 size-[42rem] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl"
+          className="absolute -top-40 left-1/2 -z-10 size-[46rem] -translate-x-1/2 rounded-full bg-[hsl(var(--emerald))]/20 blur-[120px]"
+        />
+        {/* Secondary cyan accent */}
+        <div
+          aria-hidden="true"
+          className="absolute top-20 right-1/4 -z-10 size-[32rem] rounded-full bg-[hsl(var(--cyan))]/12 blur-[100px]"
         />
 
         {/* Header */}
@@ -30,7 +36,7 @@ export default function Home() {
           <section className="mx-auto grid max-w-6xl items-center gap-14 px-4 pt-16 pb-24 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24 lg:pb-32">
             <div>
               <p className="kicker text-primary">Personal life OS</p>
-              <h1 className="mt-4 font-display text-6xl leading-[1.02] font-semibold tracking-tight sm:text-7xl lg:text-[5.5rem]">
+              <h1 className="mt-4 font-display text-[clamp(3rem,7vw+1rem,6.5rem)] leading-[0.98] font-bold tracking-[-0.03em]">
                 A shared vault for you and your{' '}
                 <em className="text-primary not-italic">AI agents</em>.<span aria-hidden="true" className="select-none opacity-0">LS</span>
               </h1>
@@ -80,10 +86,10 @@ export default function Home() {
         </h2>
         <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-px px-4 sm:px-6 md:grid-cols-4">
           {[
-            { label: 'Core files', value: '4', tone: 'text-primary' },
-            { label: 'Top-level folders', value: '6', tone: 'text-primary' },
-            { label: 'Scripts', value: '3', tone: 'text-success' },
-            { label: 'MIT licence', value: '✓', tone: 'text-success' },
+            { label: 'Core files', value: '4', tone: 'text-[hsl(var(--emerald))]' },
+            { label: 'Top-level folders', value: '6', tone: 'text-[hsl(var(--emerald))]' },
+            { label: 'Scripts', value: '3', tone: 'text-[hsl(var(--cyan))]' },
+            { label: 'MIT licence', value: '✓', tone: 'text-[hsl(var(--cyan))]' },
           ].map((s) => (
             <div key={s.label} className="px-2 py-8 text-center md:py-10">
               <dt className="kicker text-muted-foreground">{s.label}</dt>
@@ -103,36 +109,36 @@ export default function Home() {
         <p className="kicker text-primary">Building blocks</p>
         <h2
           id="features-title"
-          className="mt-3 max-w-2xl font-display text-5xl font-semibold tracking-tight"
+          className="mt-3 max-w-2xl font-display text-6xl font-bold tracking-tight lg:text-7xl"
         >
           What you get
         </h2>
         <ol className="mt-12 grid gap-5 md:grid-cols-3">
-          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 ring-1 ring-inset ring-white/5">
             <span className="absolute top-6 right-7 font-mono text-sm text-muted-foreground">
               01
             </span>
-            <FileCode2 className="size-8 text-primary" aria-hidden="true" />
+            <FileCode2 className="size-8 text-[hsl(var(--emerald))]" aria-hidden="true" />
             <h3 className="mt-6 font-display text-2xl font-semibold">Agent Contract</h3>
             <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">
               One <strong className="font-semibold text-foreground">AGENTS.md</strong> at the root defines how all agents work here: precedence, planning, memory, logging and naming.
             </p>
           </li>
-          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 ring-1 ring-inset ring-white/5">
             <span className="absolute top-6 right-7 font-mono text-sm text-muted-foreground">
               02
             </span>
-            <FolderTree className="size-8 text-primary" aria-hidden="true" />
+            <FolderTree className="size-8 text-[hsl(var(--cyan))]" aria-hidden="true" />
             <h3 className="mt-6 font-display text-2xl font-semibold">Areas as the Backbone</h3>
             <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">
               Areas hold your ongoing responsibilities (career, money, home, health), projects serve areas, archives hold what is finished.
             </p>
           </li>
-          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
+          <li className="relative rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 ring-1 ring-inset ring-white/5">
             <span className="absolute top-6 right-7 font-mono text-sm text-muted-foreground">
               03
             </span>
-            <BookOpen className="size-8 text-primary" aria-hidden="true" />
+            <BookOpen className="size-8 text-[hsl(var(--amber))]" aria-hidden="true" />
             <h3 className="mt-6 font-display text-2xl font-semibold">Smart Memory</h3>
             <p className="mt-3 text-[0.9375rem] leading-relaxed text-muted-foreground">
               MEMORY.md stays small (300-line ceiling). LOG.md is append-only. ARCHIVE.md holds what used to be true. INBOX.md for later.
@@ -142,9 +148,9 @@ export default function Home() {
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <Link
             href="#explore"
-            className="group flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 transition-colors hover:border-primary/50"
+            className="group flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 ring-1 ring-inset ring-white/5 transition-colors hover:border-[hsl(var(--emerald))]/50"
           >
-            <Folder className="size-9 shrink-0 text-primary" aria-hidden="true" />
+            <Folder className="size-9 shrink-0 text-[hsl(var(--emerald))]" aria-hidden="true" />
             <span>
               <span className="block text-lg font-semibold">Six top-level folders</span>
               <span className="mt-1 block text-[0.9375rem] text-muted-foreground">
@@ -156,8 +162,8 @@ export default function Home() {
               aria-hidden="true"
             />
           </Link>
-          <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5">
-            <ShieldCheck className="size-9 shrink-0 text-success" aria-hidden="true" />
+          <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-card p-8 shadow-xl shadow-black/5 ring-1 ring-inset ring-white/5">
+            <ShieldCheck className="size-9 shrink-0 text-[hsl(var(--cyan))]" aria-hidden="true" />
             <span>
               <span className="block text-lg font-semibold">Privacy by convention</span>
               <span className="mt-1 block text-[0.9375rem] text-muted-foreground">
@@ -178,7 +184,7 @@ export default function Home() {
           <p className="kicker text-primary">Explore</p>
           <h2
             id="explore-title"
-            className="mt-3 font-display text-5xl font-semibold tracking-tight"
+            className="mt-3 font-display text-6xl font-bold tracking-tight lg:text-7xl"
           >
             Browse the template
           </h2>
@@ -196,7 +202,7 @@ export default function Home() {
         <p className="kicker text-primary">Getting started</p>
         <h2
           id="start-title"
-          className="mt-3 font-display text-5xl font-semibold tracking-tight"
+          className="mt-3 font-display text-6xl font-bold tracking-tight lg:text-7xl"
         >
           Three commands to set up your vault.
         </h2>
@@ -278,7 +284,7 @@ export default function Home() {
             <p className="kicker text-primary">About this template</p>
             <h2
               id="about-title"
-              className="mt-3 font-display text-5xl font-semibold tracking-tight"
+              className="mt-3 font-display text-6xl font-bold tracking-tight lg:text-7xl"
             >
               A file-based personal OS.
             </h2>
@@ -343,7 +349,7 @@ export default function Home() {
       {/* CTA */}
       <section aria-labelledby="cta-title" className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-primary/25 via-card to-primary/20 px-8 py-16 text-center shadow-2xl shadow-primary/10 sm:px-12 sm:py-20">
-          <h2 id="cta-title" className="font-display text-5xl font-semibold tracking-tight">
+          <h2 id="cta-title" className="font-display text-6xl font-bold tracking-tight lg:text-7xl">
             Start building your vault.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
